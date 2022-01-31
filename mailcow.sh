@@ -21,7 +21,7 @@ git clone https://github.com/mailcow/mailcow-dockerized
 cd mailcow-dockerized
 MAILCOW_HOSTNAME="mail.fphish.com" MAILCOW_TZ="Asia/Kolkata" SKIP_CLAMD=y ./generate_config.sh
  
-echo -e "173.243.137.145 \n173.243.137.12" >> /opt/mailcow-dockerized/data/conf/rspamd/custom/ip_wl.map
+echo -e "173.243.137.145 \n173.243.137.12 \n66.35.26.19 \n66.35.26.18" >> /opt/mailcow-dockerized/data/conf/rspamd/custom/ip_wl.map
 sed -i 's/,reject_non_fqdn_helo_hostname//' /opt/mailcow-dockerized/data/conf/postfix/master.cf
 sed -i "s/enabled = true/enabled = false/" /opt/mailcow-dockerized/data/conf/rspamd/local.d/mx_check.conf
  
